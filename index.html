@@ -80,12 +80,16 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     // Slightly increase the primary identity and navigation text.
     template = template.replace('</head>', `<style>
+      .page {
+        height: 100dvh;
+        min-height: 100svh;
+      }
       .name { font-size: 55px; }
       .title { font-size: 15px; }
       .links { font-size: 14px; }
       @media (max-width: 600px) {
         .name { font-size: 39px; }
-        .links { font-size: 15px; }
+        .links { font-size: 15px; bottom: 24px; }
       }
     </style></head>`);
 
